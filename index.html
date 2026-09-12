@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ledgize — Real-Time Margin Clarity for E-Commerce Sellers</title>
+  <meta name="description" content="Ledgize gives Shopify, Amazon, and eBay sellers real-time visibility into true profit margins, backed by executive-level financial advisory. Claim your free diagnostic audit." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Ledgize</a>
+
+      <nav class="site-nav" id="site-nav">
+        <a href="#problem">The Problem</a>
+        <a href="#difference">Approach</a>
+        <a href="#services">Services</a>
+        <a href="#how-it-works">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#audit" class="btn btn-primary btn-nav-cta">Free Diagnostic Audit</a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">For Shopify · Amazon · eBay Sellers</p>
+          <h1>Real-time visibility into your <span class="text-accent">true profit margins.</span></h1>
+          <p class="hero-sub">
+            Ledgize builds the financial infrastructure and delivers the executive-level advisory
+            that e-commerce sellers on Shopify, Amazon, and eBay need to see — and trust — their
+            real numbers after fees, ad spend, and marketplace payouts.
+          </p>
+          <div class="hero-actions">
+            <a href="#audit" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
+            <a href="#how-it-works" class="btn btn-ghost btn-lg">See How It Works</a>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <defs>
+              <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#1F3864"/>
+                <stop offset="100%" stop-color="#3E5C94"/>
+              </linearGradient>
+            </defs>
+            <rect x="20" y="20" width="440" height="320" rx="16" fill="#F2F4F8"/>
+            <line x1="60" y1="80" x2="60" y2="300" stroke="#D6DCE7" stroke-width="2"/>
+            <line x1="60" y1="300" x2="440" y2="300" stroke="#D6DCE7" stroke-width="2"/>
+            <rect x="90" y="230" width="34" height="70" rx="4" fill="url(#barGrad)"/>
+            <rect x="150" y="190" width="34" height="110" rx="4" fill="url(#barGrad)"/>
+            <rect x="210" y="150" width="34" height="150" rx="4" fill="url(#barGrad)"/>
+            <rect x="270" y="110" width="34" height="190" rx="4" fill="url(#barGrad)"/>
+            <rect x="330" y="70" width="34" height="230" rx="4" fill="#C9A24B"/>
+            <polyline points="90,220 150,180 210,140 270,95 330,55" fill="none" stroke="#1F3864" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+            <circle cx="330" cy="55" r="6" fill="#C9A24B"/>
+            <text x="60" y="335" font-family="Inter, sans-serif" font-size="13" fill="#5B6578">Net margin, after fees &amp; ad spend</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section id="problem" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-center">The Problem</p>
+        <h2 class="section-title center">Your books say one thing. Your bank account says another.</h2>
+        <p class="section-lead center">
+          Most multi-channel sellers aren't short on data — they're short on numbers they can trust.
+        </p>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 19h16M4 19V7l4-3 4 3 4-3 4 3v12" stroke="#1F3864" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Margins that hide the truth</h3>
+            <p>QuickBooks or Xero shows a number — but it isn't net of marketplace fees, ad spend, and returns. The "profit" on your P&amp;L rarely matches what actually lands in the bank.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M3 12h18M3 6h18M3 18h18" stroke="#1F3864" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Books that don't reconcile</h3>
+            <p>Amazon settlements, Shopify payouts, and eBay fees each hit your bank on their own schedule, in their own lump sums — leaving books that are technically "done" but not actually accurate.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1F3864" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="#1F3864" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </div>
+            <h3>No real-time read on cash</h3>
+            <p>By the time month-end close tells you where you stand, the decisions that mattered — inventory buys, ad budget, hiring — already happened without that information.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW LEDGIZE IS DIFFERENT ============ -->
+    <section id="difference" class="section">
+      <div class="container">
+        <p class="eyebrow eyebrow-center">How Ledgize Is Different</p>
+        <h2 class="section-title center">We don't just "do your bookkeeping." We build your financial infrastructure.</h2>
+        <p class="section-lead center">
+          Ledgize is built specifically around how e-commerce revenue actually works — not adapted
+          from generic small-business bookkeeping.
+        </p>
+
+        <div class="stack-panel">
+          <div class="stack-row">
+            <div class="stack-node">
+              <span class="stack-tag">Channel Data</span>
+              <strong>A2X</strong>
+              <p>Breaks down every Shopify, Amazon, and eBay settlement into clean, accrual-accurate revenue, fees, and payouts.</p>
+            </div>
+            <div class="stack-arrow" aria-hidden="true">→</div>
+            <div class="stack-node">
+              <span class="stack-tag">Ledger</span>
+              <strong>QuickBooks / Xero</strong>
+              <p>The system of record — configured specifically for multi-channel margin visibility, not a generic chart of accounts.</p>
+            </div>
+            <div class="stack-arrow" aria-hidden="true">→</div>
+            <div class="stack-node">
+              <span class="stack-tag">Bill Capture</span>
+              <strong>AutoEntry</strong>
+              <p>Removes manual data entry from the process, so the books stay current without a backlog of receipts and invoices.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-2 difference-secondary">
+          <div class="card card-flat">
+            <h3>A structured, not arbitrary, process</h3>
+            <p>
+              Every engagement starts with a structured evaluation of your current financial
+              setup — data quality, channel complexity, reporting needs, and advisory readiness —
+              so the plan we recommend is based on where your business actually stands, not a
+              one-size-fits-all package.
+            </p>
+          </div>
+          <div class="card card-flat">
+            <h3>Built for e-commerce specifically</h3>
+            <p>
+              Marketplace settlement timing, COGS by channel, ad spend allocation, and true
+              landed-cost margin aren't edge cases to us — they're the default assumption behind
+              every system we set up.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES / TIERS ============ -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <p class="eyebrow eyebrow-center">Services</p>
+        <h2 class="section-title center">Three tiers, built for where your business is today.</h2>
+        <p class="section-lead center">
+          Because every engagement is scoped to your specific channel mix and complexity, pricing
+          is confirmed on a call — not published as a one-size-fits-all rate.
+        </p>
+
+        <div class="grid grid-3 tiers">
+          <div class="card tier-card">
+            <h3 class="tier-name">Foundation</h3>
+            <p class="tier-for">For single-channel sellers who need clean, reliable books.</p>
+            <ul class="tier-list">
+              <li>Single-channel bookkeeping (Shopify, Amazon, or eBay)</li>
+              <li>A2X-powered settlement reconciliation</li>
+              <li>Monthly close &amp; core financial statements</li>
+              <li>Clean baseline for margin visibility</li>
+            </ul>
+            <a href="#audit" class="btn btn-outline btn-block">Start With a Diagnostic</a>
+          </div>
+
+          <div class="card tier-card tier-featured">
+            <span class="tier-badge">Most Common</span>
+            <h3 class="tier-name">Growth</h3>
+            <p class="tier-for">For multi-channel sellers managing real complexity.</p>
+            <ul class="tier-list">
+              <li>Multi-channel reconciliation across Shopify, Amazon &amp; eBay</li>
+              <li>True margin reporting after fees, ad spend &amp; COGS</li>
+              <li>AutoEntry-driven bill and expense capture</li>
+              <li>Faster, more current monthly close</li>
+            </ul>
+            <a href="#audit" class="btn btn-primary btn-block">Start With a Diagnostic</a>
+          </div>
+
+          <div class="card tier-card">
+            <h3 class="tier-name">Scale</h3>
+            <p class="tier-for">For established sellers who need a financial advisor, not just a bookkeeper.</p>
+            <ul class="tier-list">
+              <li>Everything in Growth, fully built out</li>
+              <li>Executive-level financial advisory &amp; cash strategy</li>
+              <li>Real-time margin &amp; cash-position visibility</li>
+              <li>Ongoing strategic review, not just historical reporting</li>
+            </ul>
+            <a href="#audit" class="btn btn-outline btn-block">Start With a Diagnostic</a>
+          </div>
+        </div>
+
+        <p class="tiers-note">Exact scope and investment are confirmed after your diagnostic audit, based on your channel mix and current financial setup.</p>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <p class="eyebrow eyebrow-center">How It Works</p>
+        <h2 class="section-title center">A clear path from first call to your first close.</h2>
+
+        <div class="grid grid-4 process">
+          <div class="process-step">
+            <div class="process-num">1</div>
+            <h3>Discovery Call</h3>
+            <p>We learn your channel mix, current tools, and where your numbers feel unreliable.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">2</div>
+            <h3>Scoping</h3>
+            <p>Your diagnostic audit results inform a tier and scope built around your actual complexity.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">3</div>
+            <h3>Onboarding</h3>
+            <p>We connect A2X, configure your ledger, and set up AutoEntry — your infrastructure, built.</p>
+          </div>
+          <div class="process-step">
+            <div class="process-num">4</div>
+            <h3>First Close Package</h3>
+            <p>You see your first accurate, channel-level close — true margin, clearly reported.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FREE DIAGNOSTIC AUDIT ============ -->
+    <section id="audit" class="section section-audit">
+      <div class="container audit-inner">
+        <div class="audit-copy">
+          <p class="eyebrow">No Cost. No Obligation.</p>
+          <h2 class="section-title">The Free Diagnostic Audit</h2>
+          <p class="section-lead-left">
+            Before you commit to anything, we take a structured look at your current books and
+            channel setup — so you know exactly where you stand and what it would take to fix it.
+          </p>
+
+          <ul class="audit-list">
+            <li><strong>A review of your current books</strong> across QuickBooks/Xero and your connected sales channels.</li>
+            <li><strong>A clear picture of your true margin</strong> versus what your current reports show.</li>
+            <li><strong>A structured assessment</strong> of your financial setup against what your business actually needs.</li>
+            <li><strong>A straightforward recommendation</strong> — including whether Ledgize is even the right fit.</li>
+          </ul>
+
+          <a href="#contact" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
+        </div>
+
+        <div class="audit-visual" aria-hidden="true">
+          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="160" cy="160" r="140" fill="none" stroke="#2E4E82" stroke-width="1.5" opacity="0.35"/>
+            <circle cx="160" cy="160" r="100" fill="none" stroke="#2E4E82" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="160" cy="160" r="60" fill="#1F3864" opacity="0.08"/>
+            <path d="M160 60 A100 100 0 0 1 240 195" fill="none" stroke="#C9A24B" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="160" cy="160" r="10" fill="#1F3864"/>
+            <text x="160" y="290" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#5B6578">Diagnostic score, by category</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT / FOUNDER ============ -->
+    <section id="about" class="section section-alt">
+      <div class="container about-inner">
+        <p class="eyebrow eyebrow-center">About Ledgize</p>
+        <h2 class="section-title center">Built on deep e-commerce accounting expertise — not a generic playbook.</h2>
+
+        <div class="about-copy">
+          <p>
+            Ledgize was built around one specific problem: e-commerce sellers on Shopify, Amazon,
+            and eBay are consistently underserved by generalist bookkeeping. Marketplace
+            settlement mechanics, multi-channel reconciliation, and true landed-cost margin
+            calculation are specialized problems — and most firms treat them as an afterthought.
+          </p>
+          <p>
+            Our founder's background is in exactly that specialization: hands-on depth with
+            A2X-based channel accounting, marketplace fee and settlement structures across
+            Shopify, Amazon, and eBay, and the reconciliation work required to make multi-channel
+            books actually trustworthy. Ledgize exists to bring that specific expertise to sellers
+            who need executive-level financial clarity, not just a monthly bookkeeping task
+            checked off a list.
+          </p>
+          <p>
+            We're a new firm, and we won't pretend otherwise — you won't find client logos or
+            testimonials on this page because we believe those should be earned, not implied.
+            What we bring instead is a genuinely specialized system, built specifically for how
+            e-commerce revenue works.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT / FINAL CTA ============ -->
+    <section id="contact" class="section section-contact">
+      <div class="container contact-inner">
+        <p class="eyebrow eyebrow-center">Get Started</p>
+        <h2 class="section-title center">Ready to see your true numbers?</h2>
+        <p class="section-lead center">
+          Claim your free diagnostic audit — no cost, no obligation. We'll follow up to schedule
+          your discovery call.
+        </p>
+
+        <div class="contact-grid">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="form-row">
+              <label for="channels">Which platforms do you sell on?</label>
+              <input type="text" id="channels" name="channels" placeholder="e.g. Shopify, Amazon" />
+            </div>
+            <div class="form-row">
+              <label for="message">Anything else we should know?</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Claim Your Free Diagnostic Audit</button>
+            <p class="form-note" id="form-note"></p>
+          </form>
+
+          <div class="contact-direct">
+            <h3>Prefer email?</h3>
+            <p>Reach out directly and we'll respond within one business day.</p>
+            <a href="mailto:ali@ledgize.com" class="contact-email">ali@ledgize.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="logo logo-footer">Ledgize</span>
+      <p>&copy; <span id="year"></span> Ledgize. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
