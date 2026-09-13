@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ledgize: Real-Time Margin Clarity for E-Commerce Sellers</title>
-  <meta name="description" content="Ledgize gives Shopify, Amazon, and eBay sellers real-time visibility into true profit margins, backed by executive-level financial advisory. Claim your free diagnostic audit." />
+  <title>Ledgize: Clear Margin Visibility for E-Commerce Sellers</title>
+  <meta name="description" content="Ledgize gives Shopify and Amazon sellers clear, current visibility into true profit margins, backed by executive-level financial advisory. Claim your free diagnostic audit." />
   <link rel="canonical" href="https://ledgize.com/" />
 
   <!-- Favicons -->
@@ -17,28 +17,35 @@
   <!-- Open Graph / social preview -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Ledgize" />
-  <meta property="og:title" content="Ledgize: Real-Time Margin Clarity for E-Commerce Sellers" />
-  <meta property="og:description" content="Real-time visibility into true profit margins, backed by executive-level financial advisory for Shopify, Amazon, and eBay sellers." />
+  <meta property="og:title" content="Ledgize: Clear Margin Visibility for E-Commerce Sellers" />
+  <meta property="og:description" content="Clear, current visibility into true profit margins, backed by executive-level financial advisory for Shopify and Amazon sellers." />
   <meta property="og:url" content="https://ledgize.com/" />
   <meta property="og:image" content="https://ledgize.com/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Ledgize: Real-Time Margin Clarity for E-Commerce Sellers" />
-  <meta name="twitter:description" content="Real-time visibility into true profit margins, backed by executive-level financial advisory for Shopify, Amazon, and eBay sellers." />
+  <meta name="twitter:title" content="Ledgize: Clear Margin Visibility for E-Commerce Sellers" />
+  <meta name="twitter:description" content="Clear, current visibility into true profit margins, backed by executive-level financial advisory for Shopify and Amazon sellers." />
   <meta name="twitter:image" content="https://ledgize.com/assets/og-image.png" />
 
   <link rel="stylesheet" href="css/styles.css" />
 
   <!--
-    Analytics (Cloudflare Web Analytics: cookie-less, no personal data collected).
-    To enable: create a free account at https://dash.cloudflare.com -> Analytics -> Web Analytics,
-    add ledgize.com as a site, copy the token it gives you, paste it below, then uncomment this tag.
-    Because it sets no cookies and stores no cross-site identifiers, no cookie-consent banner
-    is required for this specific tool.
+    Analytics: Plausible is the preferred option here (privacy-friendly, cookie-less,
+    no consent banner needed). No Plausible account exists yet, so this is left as a
+    GA4 fallback instead. TODO before uncommenting: replace G-XXXXXXXXXX below with a
+    real GA4 Measurement ID. Note GA4 sets cookies, so going this route (instead of
+    switching to Plausible once an account exists) means adding a cookie-consent
+    banner, unlike the Plausible option.
 
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
   -->
 </head>
 <body>
@@ -57,7 +64,7 @@
         <a href="#contact">Contact</a>
       </nav>
 
-      <a href="#audit" class="btn btn-primary btn-nav-cta">Claim Your Free Diagnostic Audit</a>
+      <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-nav-cta">Claim Your Free Diagnostic Audit</a>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -71,14 +78,14 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <h1>Real-time visibility into your <span class="text-accent">true profit margins.</span></h1>
+          <h1>Clear, current visibility into your <span class="text-accent">true profit margins.</span></h1>
           <p class="hero-sub">
-            For Shopify, Amazon, and eBay sellers: Ledgize builds the financial infrastructure and
+            For Shopify and Amazon sellers: Ledgize builds the financial infrastructure and
             delivers the executive-level advisory you need to see, and trust, your real numbers
             after fees, ad spend, and marketplace payouts.
           </p>
           <div class="hero-actions">
-            <a href="#audit" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
             <a href="#how-it-works" class="btn btn-outline-onlight btn-lg">See How It Works</a>
           </div>
         </div>
@@ -124,14 +131,14 @@
             <div class="problem-num" aria-hidden="true">01</div>
             <div>
               <h3>Margins that hide the truth</h3>
-              <p>QuickBooks or Xero shows a number, but it isn't net of marketplace fees, ad spend, and returns. The "profit" on your P&amp;L rarely matches what actually lands in the bank.</p>
+              <p>QuickBooks Online shows a number, but it isn't net of marketplace fees, ad spend, and returns. The "profit" on your P&amp;L rarely matches what actually lands in the bank.</p>
             </div>
           </div>
           <div class="problem-row">
             <div class="problem-num" aria-hidden="true">02</div>
             <div>
               <h3>Books that don't reconcile</h3>
-              <p>Amazon settlements, Shopify payouts, and eBay fees each hit your bank on their own schedule, in their own lump sums, leaving books that are technically "done" but not actually accurate.</p>
+              <p>Amazon settlements and Shopify payouts each hit your bank on their own schedule, in their own lump sums, leaving books that are technically "done" but not actually accurate.</p>
             </div>
           </div>
           <div class="problem-row">
@@ -163,13 +170,13 @@
             <div class="stack-step-num">1</div>
             <span class="stack-tag">Channel Data</span>
             <strong>A2X</strong>
-            <p>Breaks down every Shopify, Amazon, and eBay settlement into clean, accrual-accurate revenue, fees, and payouts.</p>
+            <p>Breaks down every Shopify and Amazon settlement into clean, accrual-accurate revenue, fees, and payouts.</p>
           </div>
           <div class="stack-connector" aria-hidden="true">&#8594;</div>
           <div class="stack-card">
             <div class="stack-step-num">2</div>
             <span class="stack-tag">Ledger</span>
-            <strong>QuickBooks / Xero</strong>
+            <strong>QuickBooks Online</strong>
             <p>The system of record, configured specifically for multi-channel margin visibility, not a generic chart of accounts.</p>
           </div>
           <div class="stack-connector" aria-hidden="true">&#8594;</div>
@@ -220,38 +227,43 @@
           <div class="tier-card">
             <h3 class="tier-name">Foundation</h3>
             <p class="tier-for">For single-channel sellers who need clean, reliable books.</p>
+            <p class="tier-price">$799&ndash;999/month</p>
             <ul class="tier-list">
-              <li>Single-channel bookkeeping (Shopify, Amazon, or eBay)</li>
+              <li>Single-channel bookkeeping (Shopify or Amazon)</li>
               <li>A2X-powered settlement reconciliation</li>
               <li>Monthly close &amp; core financial statements</li>
               <li>Clean baseline for margin visibility</li>
             </ul>
-            <a href="#audit" class="btn btn-outline-onlight btn-block">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-outline-onlight btn-block">Claim Your Free Diagnostic Audit</a>
           </div>
 
           <div class="tier-card tier-featured">
             <span class="tier-flag">Most Common</span>
             <h3 class="tier-name">Growth</h3>
             <p class="tier-for">For multi-channel sellers managing real complexity.</p>
+            <p class="tier-price">$1,399&ndash;1,999/month</p>
             <ul class="tier-list">
-              <li>Multi-channel reconciliation across Shopify, Amazon &amp; eBay</li>
+              <li>Multi-channel reconciliation across Shopify &amp; Amazon</li>
               <li>True margin reporting after fees, ad spend &amp; COGS</li>
               <li>AutoEntry-driven bill and expense capture</li>
+              <li>Monthly Loom walkthrough with flagged action items</li>
               <li>Faster, more current monthly close</li>
             </ul>
-            <a href="#audit" class="btn btn-on-navy btn-block">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-block">Claim Your Free Diagnostic Audit</a>
           </div>
 
           <div class="tier-card">
+            <span class="tier-flag tier-flag-muted">Launching January 2027</span>
             <h3 class="tier-name">Scale</h3>
             <p class="tier-for">For established sellers who need a financial advisor, not just a bookkeeper.</p>
+            <p class="tier-price tier-price-tba">Pricing available at launch</p>
             <ul class="tier-list">
               <li>Everything in Growth, fully built out</li>
               <li>Executive-level financial advisory &amp; cash strategy</li>
-              <li>Real-time margin &amp; cash-position visibility</li>
+              <li>Clear, current margin &amp; cash-position visibility</li>
               <li>Ongoing strategic review, not just historical reporting</li>
             </ul>
-            <a href="#audit" class="btn btn-outline-onlight btn-block">Claim Your Free Diagnostic Audit</a>
+            <button type="button" class="btn btn-disabled btn-block" disabled>Not Yet Bookable</button>
           </div>
         </div>
 
@@ -308,11 +320,13 @@
           </p>
 
           <ul class="audit-list">
-            <li><strong>A review of your current books</strong> across QuickBooks/Xero and your connected sales channels.</li>
+            <li><strong>A review of your current books</strong> across QuickBooks Online and your connected sales channels.</li>
             <li><strong>A clear picture of your true margin</strong> versus what your current reports show.</li>
             <li><strong>An assessment of your financial setup</strong> against what your business actually needs.</li>
             <li><strong>A straightforward recommendation</strong>, including whether Ledgize is even the right fit.</li>
           </ul>
+
+          <p class="audit-confidentiality">Your financial data and account access are kept strictly confidential and used only for this engagement.</p>
 
           <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-lg">Claim Your Free Diagnostic Audit</a>
         </div>
@@ -341,15 +355,15 @@
 
         <div class="about-copy">
           <p>
-            Ledgize was built around one specific problem: e-commerce sellers on Shopify, Amazon,
-            and eBay are consistently underserved by generalist bookkeeping. Marketplace
+            Ledgize was built around one specific problem: e-commerce sellers on Shopify and Amazon
+            are consistently underserved by generalist bookkeeping. Marketplace
             settlement mechanics, multi-channel reconciliation, and true landed-cost margin
             calculation are specialized problems, and most firms treat them as an afterthought.
           </p>
           <p>
             Our founder's background is in exactly that specialization: hands-on depth with
             A2X-based channel accounting, marketplace fee and settlement structures across
-            Shopify, Amazon, and eBay, and the reconciliation work required to make multi-channel
+            Shopify and Amazon, and the reconciliation work required to make multi-channel
             books actually trustworthy. Ledgize exists to bring that expertise to sellers who need
             executive-level financial clarity, not just a monthly bookkeeping task checked off a list.
           </p>
@@ -363,48 +377,47 @@
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="kicker center">
+          <span class="kicker-num">07</span>
+          <span class="kicker-label">Common Questions</span>
+        </div>
+        <h2 class="section-title center">A few things sellers usually ask.</h2>
+
+        <div class="grid grid-2">
+          <div class="card-flat">
+            <h3>What if I already have a bookkeeper?</h3>
+            <p>Many sellers we talk to already have someone handling basic data entry. The gap is usually the systems layer underneath it: whether marketplace settlements are actually reconciling, and whether the reports reflect true margin by channel. Your diagnostic audit will show you exactly where that gap is, if there is one.</p>
+          </div>
+          <div class="card-flat">
+            <h3>How do I know my books will be handled correctly?</h3>
+            <p>Every engagement starts with a structured evaluation of your current setup rather than guesswork, and the same reconciliation process applies at every tier. If something in your books doesn't reconcile, you'll hear about it directly, not months later at tax time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ CONTACT / FINAL CTA ============ -->
     <section id="contact" class="section section-contact">
       <div class="container contact-inner">
         <div class="kicker center">
-          <span class="kicker-num">07</span>
+          <span class="kicker-num">08</span>
           <span class="kicker-label">Get Started</span>
         </div>
         <h2 class="section-title center">Ready to see your true numbers?</h2>
         <p class="section-lead center">
-          Claim your free diagnostic audit. No cost, no obligation. We'll follow up to schedule
-          your discovery call.
+          Claim your free diagnostic audit. No cost, no obligation. Book a time below, or reach
+          out by email.
         </p>
 
         <div class="contact-grid">
-          <form id="contact-form" class="contact-form">
-            <div class="form-row">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required autocomplete="name" />
-            </div>
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
-            <div class="form-row">
-              <label for="channels">Which platforms do you sell on?</label>
-              <input type="text" id="channels" name="channels" placeholder="e.g. Shopify, Amazon" />
-            </div>
-            <div class="form-row">
-              <label for="message">Anything else we should know?</label>
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-
-            <!-- Honeypot: hidden from real visitors, invisible to screen readers via aria-hidden + tabindex.
-                 Bots that auto-fill every field will fill this in; humans never will. -->
-            <div class="form-row honeypot" aria-hidden="true">
-              <label for="company-website">Company Website</label>
-              <input type="text" id="company-website" name="company-website" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block">Claim Your Free Diagnostic Audit</button>
-            <p class="form-note" id="form-note" role="status"></p>
-          </form>
+          <div class="contact-direct">
+            <h3>Book directly</h3>
+            <p>Pick a time that works for you, and we'll meet on a call.</p>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">Claim Your Free Diagnostic Audit</a>
+          </div>
 
           <div class="contact-direct">
             <h3>Prefer email?</h3>

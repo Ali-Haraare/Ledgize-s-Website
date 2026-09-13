@@ -1,7 +1,7 @@
 # Ledgize Website
 
-Single-page marketing site for Ledgize, a firm helping Shopify, Amazon, and eBay
-sellers get real-time visibility into true profit margins, backed by
+Single-page marketing site for Ledgize, a firm helping Shopify and Amazon
+sellers get clear, current visibility into true profit margins, backed by
 executive-level financial advisory.
 
 Static HTML/CSS/vanilla JS, no build step, no backend.
@@ -17,7 +17,7 @@ sitemap.xml          — search engine sitemap
 robots.txt           — crawler rules
 CNAME                — custom domain for GitHub Pages (ledgize.com)
 css/styles.css        — design system (navy #1F3864 / gold #C9A24B, self-hosted fonts)
-js/script.js          — mobile nav toggle + contact form validation/mailto handoff
+js/script.js          — mobile nav toggle
 assets/favicon.svg, favicon.ico, favicon-*.png, apple-touch-icon.png — favicons
 assets/og-image.png   — social share preview image (1200x630)
 assets/fonts/         — self-hosted Public Sans + Source Serif 4 (static woff2, no Google Fonts CDN)
@@ -45,19 +45,22 @@ npx serve .
 
 ## Analytics
 
-The site ships with a commented-out Cloudflare Web Analytics snippet in `index.html`'s `<head>`.
-It's cookie-less and collects no personal data, so no cookie-consent banner is needed for it.
-To enable: create a free Cloudflare account, add `ledgize.com` under Analytics → Web Analytics,
-copy the token into the snippet, and uncomment it.
+The site ships with a commented-out GA4 snippet in `index.html`'s `<head>`, used only as a
+fallback until a Plausible account exists (Plausible is the preferred, cookie-less option that
+needs no consent banner). To enable the GA4 fallback: replace `G-XXXXXXXXXX` with a real
+Measurement ID and uncomment the block. Note GA4 sets cookies, so going that route instead of
+switching to Plausible means adding a cookie-consent banner.
 
 ## Content notes
 
-- No pricing figures, client logos, or testimonials are published: per the site spec, none exist
-  yet and pricing is confirmed on a call.
+- Foundation and Growth show rough pricing ranges; Scale's pricing is withheld until it launches
+  (see below). Exact scope and investment are still confirmed on a call per tier's custom scoring.
+- Scale is not yet an active offering (launching January 2027) — its card shows a "Launching"
+  label and a disabled button instead of a live CTA.
+- The site serves Shopify and Amazon sellers only; eBay support and Xero support are both paused.
 - The About section is intentionally firm-branded ("our founder") rather than naming or
   photographing the founder, pending confirmation from the founder.
 - `terms.html` has a placeholder for the governing-law jurisdiction; fill this in once the
   business entity is formally registered.
-- The contact form hands off to a `mailto:` link rather than a backend (no server, no database,
-  per spec). It validates input and includes a honeypot field against basic bots, but actual
-  message delivery still depends on the visitor's email client and on their sending the email.
+- The primary conversion path is a direct Calendly link (opens in a new tab). The old mailto
+  contact form was removed as redundant; "Prefer email?" still links to `ali@ledgize.com`.
