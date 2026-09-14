@@ -29,7 +29,7 @@
   <meta name="twitter:description" content="Clear, current visibility into true profit margins, backed by executive-level financial advisory for Shopify and Amazon sellers." />
   <meta name="twitter:image" content="https://ledgize.com/assets/og-image.png" />
 
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=2" />
 
   <!--
     Analytics: Plausible is the preferred option here (privacy-friendly, cookie-less,
@@ -407,7 +407,15 @@
             <p>Reach out directly and we'll respond within one business day.</p>
             <div class="email-row">
               <a href="mailto:ali@ledgize.com" class="contact-email">ali@ledgize.com</a>
-              <button type="button" class="copy-btn" id="copy-email-btn" data-email="ali@ledgize.com">Copy</button>
+              <button type="button" class="copy-icon-btn" id="copy-email-btn" data-email="ali@ledgize.com" aria-label="Copy email address">
+                <svg class="icon-copy" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="9" y="9" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M6 15H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+                <svg class="icon-check" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+                  <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
             <p class="copy-note" id="copy-note" role="status"></p>
           </div>
@@ -430,6 +438,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.js?v=2"></script>
 </body>
 </html>

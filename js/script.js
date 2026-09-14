@@ -21,18 +21,38 @@ document.addEventListener("DOMContentLoaded", function () {
   var copyBtn = document.getElementById("copy-email-btn");
   var copyNote = document.getElementById("copy-note");
   if (copyBtn && copyNote) {
+    var iconCopy = copyBtn.querySelector(".icon-copy");
+    var iconCheck = copyBtn.querySelector(".icon-check");
+    var revertTimer = null;
+
+    function showCopied(email) {
+      copyNote.textContent = "Copied " + email + ". Paste it into your email app.";
+      copyBtn.classList.add("copied");
+      iconCopy.hidden = true;
+      iconCheck.hidden = false;
+
+      clearTimeout(revertTimer);
+      revertTimer = setTimeout(function () {
+        copyBtn.classList.remove("copied");
+        iconCopy.hidden = false;
+        iconCheck.hidden = true;
+        copyNote.textContent = "";
+      }, 2500);
+    }
+
+    function showFallback(email) {
+      copyNote.textContent = "Couldn't copy automatically. The address is " + email + ".";
+    }
+
     copyBtn.addEventListener("click", function () {
       var email = copyBtn.getAttribute("data-email");
 
-      function showCopied() {
-        copyNote.textContent = "Copied " + email + ". Paste it into your email app.";
-      }
-      function showFallback() {
-        copyNote.textContent = "Couldn't copy automatically. The address is " + email + ".";
-      }
-
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(email).then(showCopied).catch(showFallback);
+        navigator.clipboard.writeText(email).then(function () {
+          showCopied(email);
+        }).catch(function () {
+          showFallback(email);
+        });
       } else {
         var tempInput = document.createElement("input");
         tempInput.value = email;
@@ -43,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function () {
         tempInput.select();
         try {
           document.execCommand("copy");
-          showCopied();
+          showCopied(email);
         } catch (e) {
-          showFallback();
+          showFallback(email);
         }
         document.body.removeChild(tempInput);
       }

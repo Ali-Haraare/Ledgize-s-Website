@@ -479,18 +479,22 @@ h1, h2, h3 {
 
 .email-row { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; }
 
-.copy-btn {
-  font-family: var(--font-sans);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--navy);
-  background: transparent;
+.copy-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 4px 10px;
+  background: #fff;
+  color: var(--muted);
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
-.copy-btn:hover { border-color: var(--navy); }
+.copy-icon-btn:hover { background: var(--navy-pale); color: var(--navy); border-color: var(--navy-pale); }
+.copy-icon-btn.copied { background: var(--navy-pale); color: var(--navy); border-color: var(--navy-pale); }
+.copy-icon-btn svg { width: 15px; height: 15px; }
 
 .copy-note { font-size: 0.85rem; color: var(--navy); min-height: 1.1em; margin-top: var(--space-1); }
 
