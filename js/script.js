@@ -17,4 +17,38 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  var copyBtn = document.getElementById("copy-email-btn");
+  var copyNote = document.getElementById("copy-note");
+  if (copyBtn && copyNote) {
+    copyBtn.addEventListener("click", function () {
+      var email = copyBtn.getAttribute("data-email");
+
+      function showCopied() {
+        copyNote.textContent = "Copied " + email + ". Paste it into your email app.";
+      }
+      function showFallback() {
+        copyNote.textContent = "Couldn't copy automatically. The address is " + email + ".";
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(showCopied).catch(showFallback);
+      } else {
+        var tempInput = document.createElement("input");
+        tempInput.value = email;
+        tempInput.setAttribute("readonly", "");
+        tempInput.style.position = "absolute";
+        tempInput.style.left = "-9999px";
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand("copy");
+          showCopied();
+        } catch (e) {
+          showFallback();
+        }
+        document.body.removeChild(tempInput);
+      }
+    });
+  }
 });
