@@ -263,8 +263,6 @@ h1, h2, h3 {
   margin-bottom: var(--space-3);
 }
 
-.text-accent { color: var(--navy-light); }
-
 .hero-sub {
   font-size: 1.14rem;
   color: var(--muted);
