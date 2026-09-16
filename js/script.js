@@ -113,12 +113,10 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var fabContact = document.createElement("a");
-  fabContact.href = "https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=floating_button";
-  fabContact.target = "_blank";
-  fabContact.rel = "noopener noreferrer";
+  fabContact.href = "mailto:ali@ledgize.com?subject=Quick%20question%20from%20the%20website";
   fabContact.className = "fab fab-contact";
-  fabContact.setAttribute("aria-label", "Claim your free diagnostic audit");
-  fabContact.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  fabContact.setAttribute("aria-label", "Email us a question");
+  fabContact.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   var fabTop = document.createElement("button");
   fabTop.type = "button";
