@@ -75,12 +75,14 @@
   --space-8: 128px;
 }
 
-/* Dark mode: follows the visitor's OS/browser setting automatically via
-   prefers-color-scheme. Only color tokens change; navy/gold used as fills
-   (buttons, featured card, footer, audit section) stay the same since
-   they're already dark surfaces. Contrast-checked against WCAG AA. */
+/* Dark mode: follows the visitor's OS/browser setting by default via
+   prefers-color-scheme, but the header toggle can explicitly override it
+   in either direction via [data-theme] on <html> (saved to localStorage).
+   Only color tokens change; navy/gold used as fills (buttons, featured
+   card, footer, audit section) stay the same since they're already dark
+   surfaces. Contrast-checked against WCAG AA. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --navy-pale: #232B40;
     --navy-text: #93B4EC;
     --ink: #F3F5F9;
@@ -92,6 +94,18 @@
     --surface: #1B2130;
     --header-bg: rgba(16,20,28,0.9);
   }
+}
+:root[data-theme="dark"] {
+  --navy-pale: #232B40;
+  --navy-text: #93B4EC;
+  --ink: #F3F5F9;
+  --body: #C7CDD9;
+  --muted: #8890A3;
+  --line: #2E3750;
+  --bg: #10141C;
+  --bg-alt: #171C28;
+  --surface: #1B2130;
+  --header-bg: rgba(16,20,28,0.9);
 }
 
 /* ===== Reset ===== */
@@ -166,6 +180,80 @@ h1, h2, h3 {
   cursor: not-allowed;
 }
 
+/* ===== Skip link (accessibility) ===== */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--space-2);
+  z-index: 200;
+  background: var(--navy);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* ===== Scroll progress bar ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--gold);
+  z-index: 300;
+  transition: width 0.1s linear;
+}
+
+/* ===== Floating action buttons (contact + back to top) ===== */
+.fab {
+  position: fixed;
+  bottom: var(--space-3);
+  z-index: 150;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, background-color 0.15s ease;
+  cursor: pointer;
+  border: none;
+}
+.fab.is-visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.fab-contact {
+  right: var(--space-3);
+  background: var(--gold);
+  color: var(--navy);
+}
+.fab-contact:hover { background: #D9B461; }
+.fab-contact svg { width: 22px; height: 22px; }
+
+.fab-top {
+  left: var(--space-3);
+  background: var(--surface);
+  color: var(--navy-text);
+  border: 1px solid var(--line);
+}
+.fab-top:hover { background: var(--navy-pale); }
+.fab-top svg { width: 20px; height: 20px; }
+
+@media (max-width: 480px) {
+  .fab { width: 46px; height: 46px; bottom: var(--space-2); }
+  .fab-contact { right: var(--space-2); }
+  .fab-top { left: var(--space-2); }
+}
+
 /* ===== Header / Nav ===== */
 .site-header {
   position: sticky;
@@ -217,6 +305,23 @@ h1, h2, h3 {
   cursor: pointer;
 }
 .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--navy-text); border-radius: 2px; }
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--navy-text);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+.theme-toggle-btn:hover { background: var(--navy-pale); }
+.theme-toggle-btn svg { width: 17px; height: 17px; }
 
 /* ===== Sections ===== */
 .section { padding: var(--space-7) 0; }
@@ -390,6 +495,31 @@ h1, h2, h3 {
 }
 .card-flat h3 { font-size: 1.08rem; margin-bottom: var(--space-1); }
 .card-flat p { font-size: 0.96rem; color: var(--muted); }
+
+/* ===== FAQ accordion ===== */
+.faq-list { display: flex; flex-direction: column; gap: var(--space-2); max-width: 760px; margin: 0 auto; }
+.faq-item {
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item .faq-chevron { width: 20px; height: 20px; flex-shrink: 0; color: var(--muted); transition: transform 0.15s ease; }
+.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-item p { font-size: 0.96rem; color: var(--muted); margin-top: var(--space-2); }
 
 /* ===== Tiers ===== */
 .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); align-items: stretch; }
@@ -605,4 +735,19 @@ h1, h2, h3 {
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
   .problem-row { grid-template-columns: 1fr; gap: var(--space-1); }
+}
+
+/* ===== Print ===== */
+@media print {
+  .site-header, .nav-toggle, .theme-toggle-btn, .skip-link,
+  .scroll-progress, .fab, .hero-visual, .audit-visual {
+    display: none !important;
+  }
+  .site-footer { border-top: 1px solid #000; }
+  a { color: inherit; text-decoration: underline; }
+  .btn { display: none !important; }
+  body { background: #fff; color: #000; }
+  .section, .section-alt, .section-audit, .section-contact { background: #fff; color: #000; padding: 16px 0; }
+  .hero { padding: 16px 0; }
+  * { box-shadow: none !important; }
 }

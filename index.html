@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="light dark" />
+  <script>
+    try {
+      var savedTheme = localStorage.getItem('ledgize-theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      }
+    } catch (e) {}
+  </script>
   <title>Ledgize: Clear Margin Visibility for E-Commerce Sellers</title>
   <meta name="description" content="Ledgize gives Shopify and Amazon sellers clear, current visibility into true profit margins, backed by executive-level financial advisory. Claim your free diagnostic audit." />
   <link rel="canonical" href="https://ledgize.com/" />
@@ -33,7 +41,7 @@
   <link rel="preload" href="assets/fonts/source-serif4-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin />
 
-  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -91,6 +99,8 @@
 </head>
 <body>
 
+  <a href="#top" class="skip-link">Skip to main content</a>
+
   <!-- ============ HEADER / NAV ============ -->
   <header class="site-header">
     <div class="container header-inner">
@@ -105,13 +115,22 @@
         <a href="#contact">Contact</a>
       </nav>
 
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true" hidden>
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+      </button>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
 
     <!-- ============ HERO ============ -->
     <section class="hero">
@@ -124,7 +143,7 @@
             after fees, ad spend, and marketplace payouts.
           </p>
           <div class="hero-actions">
-            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=hero" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Claim Your Free Diagnostic Audit</a>
             <a href="#how-it-works" class="btn btn-outline-onlight btn-lg">See How It Works</a>
           </div>
         </div>
@@ -270,7 +289,7 @@
               <li>Monthly close &amp; core financial statements</li>
               <li>Clean baseline for margin visibility</li>
             </ul>
-            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-outline-onlight btn-block">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=tier_foundation" target="_blank" rel="noopener noreferrer" class="btn btn-outline-onlight btn-block">Claim Your Free Diagnostic Audit</a>
           </div>
 
           <div class="tier-card tier-featured">
@@ -285,7 +304,7 @@
               <li>Monthly Loom walkthrough with flagged action items</li>
               <li>Faster, more current monthly close</li>
             </ul>
-            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-block">Claim Your Free Diagnostic Audit</a>
+            <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=tier_growth" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-block">Claim Your Free Diagnostic Audit</a>
           </div>
 
           <div class="tier-card">
@@ -362,7 +381,7 @@
 
           <p class="audit-confidentiality">Your financial data and account access are kept strictly confidential and used only for this engagement.</p>
 
-          <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-lg">Claim Your Free Diagnostic Audit</a>
+          <a href="https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=audit" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-lg">Claim Your Free Diagnostic Audit</a>
         </div>
 
         <div class="audit-visual" aria-hidden="true">
@@ -418,15 +437,21 @@
         </div>
         <h2 class="section-title center">A few things sellers usually ask.</h2>
 
-        <div class="grid grid-2">
-          <div class="card-flat">
-            <h3>What if I already have a bookkeeper?</h3>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>
+              <span>What if I already have a bookkeeper?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
             <p>Many sellers we talk to already have someone handling basic data entry. The gap is usually the systems layer underneath it: whether marketplace settlements are actually reconciling, and whether the reports reflect true margin by channel. Your diagnostic audit will show you exactly where that gap is, if there is one.</p>
-          </div>
-          <div class="card-flat">
-            <h3>How do I know my books will be handled correctly?</h3>
+          </details>
+          <details class="faq-item">
+            <summary>
+              <span>How do I know my books will be handled correctly?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
             <p>Every engagement starts with a structured evaluation of your current setup rather than guesswork, and the same reconciliation process applies at every tier. If something in your books doesn't reconcile, you'll hear about it directly, not months later at tax time.</p>
-          </div>
+          </details>
         </div>
       </div>
     </section>
@@ -480,6 +505,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js?v=2"></script>
+  <script src="js/script.js?v=3"></script>
 </body>
 </html>

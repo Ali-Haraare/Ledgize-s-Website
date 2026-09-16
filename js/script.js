@@ -71,4 +71,79 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  var themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    var sunIcon = themeToggle.querySelector(".icon-sun");
+    var moonIcon = themeToggle.querySelector(".icon-moon");
+
+    function getEffectiveTheme() {
+      var saved = null;
+      try { saved = localStorage.getItem("ledgize-theme"); } catch (e) {}
+      if (saved === "light" || saved === "dark") return saved;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function applyToggleIcon(theme) {
+      sunIcon.hidden = theme === "dark";
+      moonIcon.hidden = theme !== "dark";
+      themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
+
+    applyToggleIcon(getEffectiveTheme());
+
+    themeToggle.addEventListener("click", function () {
+      var next = getEffectiveTheme() === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      try { localStorage.setItem("ledgize-theme", next); } catch (e) {}
+      applyToggleIcon(next);
+    });
+  }
+
+  var progressBar = document.createElement("div");
+  progressBar.className = "scroll-progress";
+  progressBar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(progressBar);
+
+  function updateScrollProgress() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = pct + "%";
+  }
+
+  var fabContact = document.createElement("a");
+  fabContact.href = "https://calendly.com/ali-ledgize/free-diagnostic-audit-call?utm_source=ledgize_website&utm_medium=cta&utm_campaign=floating_button";
+  fabContact.target = "_blank";
+  fabContact.rel = "noopener noreferrer";
+  fabContact.className = "fab fab-contact";
+  fabContact.setAttribute("aria-label", "Claim your free diagnostic audit");
+  fabContact.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+
+  var fabTop = document.createElement("button");
+  fabTop.type = "button";
+  fabTop.className = "fab fab-top";
+  fabTop.setAttribute("aria-label", "Back to top");
+  fabTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  fabTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  document.body.appendChild(fabContact);
+  document.body.appendChild(fabTop);
+
+  function updateFabVisibility() {
+    var scrollTop = window.scrollY || document.documentElement.scrollTop;
+    var visible = scrollTop > 400;
+    fabContact.classList.toggle("is-visible", visible);
+    fabTop.classList.toggle("is-visible", visible);
+  }
+
+  function onScroll() {
+    updateScrollProgress();
+    updateFabVisibility();
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
 });
