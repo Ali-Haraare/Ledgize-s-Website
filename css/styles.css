@@ -565,7 +565,8 @@ h1, h2, h3 {
 .tier-for { color: var(--muted); font-size: 0.92rem; margin-bottom: var(--space-1); }
 
 .tier-price { font-size: 1.05rem; font-weight: 700; color: var(--navy-text); margin-bottom: var(--space-3); }
-.tier-price-tba { font-size: 0.92rem; font-weight: 600; color: var(--muted); }
+.tier-price-has-note { margin-bottom: 2px; }
+.tier-price-note { color: var(--muted); font-size: 0.82rem; margin-bottom: var(--space-3); }
 
 .tier-list { flex: 1; display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-3); }
 
