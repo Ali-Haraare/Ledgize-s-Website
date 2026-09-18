@@ -581,6 +581,17 @@ h1, h2, h3 {
   background: var(--navy-text);
 }
 
+.tier-outcome {
+  padding-left: 0;
+  padding-top: var(--space-2);
+  margin-top: var(--space-1);
+  border-top: 1px solid var(--line);
+  font-style: italic;
+  color: var(--muted);
+}
+.tier-list li.tier-outcome::before { content: none; }
+.tier-featured .tier-outcome { border-top-color: rgba(255,255,255,0.16); color: rgba(255,255,255,0.72); }
+
 .tiers-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: var(--space-4); }
 
 /* ===== Process ===== */
