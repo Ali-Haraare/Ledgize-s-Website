@@ -50,6 +50,7 @@
   --navy-pale: #EEF1F7;
   --navy-text: var(--navy);
   --gold: #C9A24B;
+  --gold-text: #8A6A2F;
   --ink: #171B24;
   --body: #3D4353;
   --muted: #5B6578;
@@ -85,6 +86,7 @@
   :root:not([data-theme="light"]) {
     --navy-pale: #232B40;
     --navy-text: #93B4EC;
+    --gold-text: var(--gold);
     --ink: #F3F5F9;
     --body: #C7CDD9;
     --muted: #8890A3;
@@ -98,6 +100,7 @@
 :root[data-theme="dark"] {
   --navy-pale: #232B40;
   --navy-text: #93B4EC;
+  --gold-text: var(--gold);
   --ink: #F3F5F9;
   --body: #C7CDD9;
   --muted: #8890A3;
@@ -589,8 +592,9 @@ h1, h2, h3 {
   color: var(--muted);
 }
 .tier-list li.tier-outcome::before { content: none; }
-.tier-outcome strong { color: var(--gold); }
+.tier-outcome strong { color: var(--gold-text); }
 .tier-featured .tier-outcome { border-top-color: rgba(255,255,255,0.16); color: rgba(255,255,255,0.72); }
+.tier-featured .tier-outcome strong { color: var(--gold); }
 
 .tiers-note { text-align: center; color: var(--muted); font-size: 0.9rem; margin-top: var(--space-4); }
 
