@@ -167,9 +167,6 @@ h1, h2, h3 {
 .btn-on-navy { background: var(--gold); color: var(--navy); }
 .btn-on-navy:hover { background: #D9B461; }
 
-.btn-outline { background: transparent; border-color: var(--navy-text); color: var(--navy-text); }
-.btn-outline:hover { background: var(--navy-pale); }
-
 .btn-outline-onlight { background: transparent; border-color: var(--line); color: var(--navy-text); }
 .btn-outline-onlight:hover { border-color: var(--navy-text); }
 
