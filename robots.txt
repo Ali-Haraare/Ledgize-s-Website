@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ledgize.com/sitemap.xml
+Sitemap: https://www.ledgize.com/sitemap.xml
