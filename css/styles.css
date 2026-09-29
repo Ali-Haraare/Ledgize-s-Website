@@ -641,6 +641,7 @@ h1, h2, h3 {
 .audit-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 700; }
 .audit-list strong { color: #fff; }
 
+.audit-summary { font-size: 0.98rem; color: rgba(255,255,255,0.9); margin-bottom: var(--space-2); }
 .audit-confidentiality { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: var(--space-3); }
 
 /* ===== About ===== */
