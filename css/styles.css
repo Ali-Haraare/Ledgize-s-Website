@@ -641,6 +641,30 @@ h1, h2, h3 {
 .audit-list li::before { content: "\2713"; position: absolute; left: 0; top: 0; color: var(--gold); font-weight: 700; }
 .audit-list strong { color: #fff; }
 
+/* Diagnostic summary preview card. The audit section is navy in both themes,
+   so the card keeps fixed "paper" colors rather than theme tokens. */
+.summary-card {
+  max-width: 320px;
+  margin-left: auto;
+  background: #fff;
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.28);
+  color: var(--navy);
+}
+.summary-eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8A6A2F; margin-bottom: var(--space-1); }
+.summary-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; line-height: 1.25; }
+.summary-meta { font-size: 0.8rem; color: #5B6578; margin: 4px 0 var(--space-2); }
+.summary-items { list-style: none; counter-reset: summary; border-top: 1px solid #E1E5ED; }
+.summary-items li { counter-increment: summary; padding: 12px 0 12px 28px; border-bottom: 1px solid #E1E5ED; position: relative; }
+.summary-items li::before { content: counter(summary, decimal-leading-zero); position: absolute; left: 0; top: 12px; font-size: 0.72rem; font-weight: 700; color: #8A6A2F; }
+.summary-items span { display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 6px; }
+.summary-items i { display: block; height: 5px; border-radius: 3px; background: #E6E9F0; }
+.summary-items i + i { margin-top: 5px; }
+.summary-items .summary-rec i { background: #EBDDB9; }
+.summary-foot { display: inline-block; margin-top: var(--space-2); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #5B6578; border: 1px solid #E1E5ED; border-radius: 2px; padding: 2px 8px; }
+
 .audit-summary { font-size: 0.98rem; color: rgba(255,255,255,0.9); margin-bottom: var(--space-2); }
 .audit-confidentiality { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: var(--space-3); }
 
