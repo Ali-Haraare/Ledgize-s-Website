@@ -648,6 +648,11 @@ h1, h2, h3 {
 .about-inner { max-width: 780px; }
 .about-copy { display: flex; flex-direction: column; gap: var(--space-3); font-size: 1.03rem; color: var(--body); }
 
+.credentials { display: flex; flex-wrap: wrap; align-items: center; gap: calc((var(--space-2) + var(--space-3)) / 2); }
+.credentials a { display: inline-flex; }
+.badge-a2x { height: 56px; width: auto; }
+.badge-qbo { height: 72px; width: auto; }
+
 /* ===== Contact ===== */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); margin-top: var(--space-2); align-items: start; }
 .contact-grid-single { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
