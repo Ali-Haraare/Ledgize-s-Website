@@ -446,6 +446,8 @@ h1, h2, h3 {
 
 .stack-card {
   flex: 1;
+  display: flex;
+  flex-direction: column;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -485,7 +487,15 @@ h1, h2, h3 {
   color: var(--ink);
   margin-bottom: var(--space-1);
 }
-.stack-card p { color: var(--muted); font-size: 0.94rem; }
+.stack-card p { color: var(--muted); font-size: 0.94rem; margin-bottom: var(--space-2); }
+.stack-card .stack-owner {
+  margin: auto 0 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--line);
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--navy-text);
+}
 
 .stack-connector {
   align-self: center;
