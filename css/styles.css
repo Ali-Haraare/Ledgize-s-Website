@@ -171,7 +171,7 @@ h1, h2, h3 {
 .btn-outline-onlight:hover { border-color: var(--navy-text); }
 
 .btn-lg { padding: 16px 30px; font-size: 1rem; }
-.btn-block { width: 100%; }
+.btn-block { width: 100%; padding-left: 16px; padding-right: 16px; white-space: normal; text-align: center; }
 
 .btn-disabled {
   background: var(--bg-alt);
@@ -800,6 +800,7 @@ h1, h2, h3 {
   .container { padding: 0 18px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }
+  .btn { white-space: normal; text-align: center; }
   .problem-row { grid-template-columns: 1fr; gap: var(--space-1); }
 }
 
