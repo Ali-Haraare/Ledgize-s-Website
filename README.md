@@ -62,5 +62,5 @@ switching to Plausible means adding a cookie-consent banner.
   photographing the founder, pending confirmation from the founder.
 - `terms.html` has a placeholder for the governing-law jurisdiction; fill this in once the
   business entity is formally registered.
-- The primary conversion path is a direct Calendly link (opens in a new tab). The old mailto
+- The primary conversion path is a direct Google Calendar booking link (opens in a new tab). The old mailto
   contact form was removed as redundant; "Prefer email?" still links to `ali@ledgize.com`.
