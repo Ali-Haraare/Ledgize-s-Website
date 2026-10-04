@@ -716,6 +716,11 @@ h1, h2, h3 {
 .copy-icon-btn svg { width: 15px; height: 15px; }
 
 .copy-note { font-size: 0.85rem; color: var(--navy-text); min-height: 1.1em; margin-top: var(--space-1); }
+.contact-actions { display: flex; justify-content: center; margin: 0 0 var(--space-4); }
+.contact-direct .contact-email-line { text-align: center; margin-bottom: 0; line-height: 2; }
+.contact-email-line .contact-email { font-size: inherit; }
+.contact-email-line .copy-icon-btn { vertical-align: middle; margin: 0 2px; }
+.contact-direct .copy-note { text-align: center; margin-bottom: 0; }
 
 /* ===== Footer ===== */
 .site-footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: var(--space-4) 0; }

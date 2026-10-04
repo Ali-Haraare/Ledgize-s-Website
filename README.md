@@ -55,7 +55,7 @@ switching to Plausible means adding a cookie-consent banner.
 
 - Foundation and Growth show rough pricing ranges; Scale's pricing is withheld until it launches
   (see below). Exact scope and investment are still confirmed on a call per tier's custom scoring.
-- Scale is not yet an active offering (launching January 2027) — its card shows a "Launching"
+- Scale is not yet an active offering (opening in spring 2027). Its card shows an "Opening in spring 2027"
   label and a disabled button instead of a live CTA.
 - The site serves Shopify and Amazon sellers only; eBay support and Xero support are both paused.
 - The About section is intentionally firm-branded ("our founder") rather than naming or
