@@ -136,7 +136,11 @@ h1, h2, h3 {
   font-weight: 600;
   line-height: 1.22;
   letter-spacing: -0.005em;
+  text-wrap: balance;
 }
+
+/* Avoid a single word stranded on the last line of a paragraph */
+p, li { text-wrap: pretty; }
 
 .container {
   max-width: var(--max-width);
@@ -613,9 +617,10 @@ h1, h2, h3 {
 .tier-featured .tier-outcome { border-top-color: rgba(255,255,255,0.16); color: rgba(255,255,255,0.72); }
 .tier-featured .tier-outcome strong { color: var(--gold); }
 
-.tiers-highlight { text-align: center; color: var(--muted); font-size: 0.92rem; margin-bottom: var(--space-4); }
+.tiers-highlight { text-align: center; color: var(--muted); font-size: 0.92rem; max-width: 760px; margin: 0 auto var(--space-4); }
 
-.tiers-note { text-align: center; color: var(--muted); font-size: 0.9rem; max-width: 760px; margin: var(--space-4) auto 0; }
+.tiers-note { text-align: left; color: var(--muted); font-size: 0.9rem; max-width: 760px; margin: var(--space-4) auto 0; }
+.tiers-note + .tiers-note { margin-top: var(--space-1); }
 
 /* ===== Process ===== */
 .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
