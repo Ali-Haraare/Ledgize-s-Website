@@ -1,6 +1,6 @@
 # Ledgize Website
 
-Single-page marketing site for Ledgize, a firm helping Shopify and Amazon
+Single-page marketing site for Ledgize, a firm helping Shopify, Amazon and eBay
 sellers get clear, current visibility into true profit margins, backed by
 executive-level financial advisory.
 
@@ -57,7 +57,7 @@ switching to Plausible means adding a cookie-consent banner.
   (see below). Exact scope and investment are still confirmed on a call per tier's custom scoring.
 - Scale is not yet an active offering (opening in spring 2027). Its card shows an "Opening in spring 2027"
   label and a disabled button instead of a live CTA.
-- The site serves Shopify and Amazon sellers only; eBay support and Xero support are both paused.
+- The site serves Shopify, Amazon and eBay sellers; Xero support is paused.
 - The About section is intentionally firm-branded ("our founder") rather than naming or
   photographing the founder, pending confirmation from the founder.
 - `terms.html` has a placeholder for the governing-law jurisdiction; fill this in once the
