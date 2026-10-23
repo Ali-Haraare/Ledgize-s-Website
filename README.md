@@ -45,11 +45,9 @@ npx serve .
 
 ## Analytics
 
-The site ships with a commented-out GA4 snippet in `index.html`'s `<head>`, used only as a
-fallback until a Plausible account exists (Plausible is the preferred, cookie-less option that
-needs no consent banner). To enable the GA4 fallback: replace `G-XXXXXXXXXX` with a real
-Measurement ID and uncomment the block. Note GA4 sets cookies, so going that route instead of
-switching to Plausible means adding a cookie-consent banner.
+Cloudflare Web Analytics (cookie-less, no consent banner needed) runs on all four pages via the
+snippet just before `</body>`. The dashboard is in the Cloudflare account under Web Analytics.
+The privacy policy's Analytics section describes it; update that section if the tool changes.
 
 ## Content notes
 
