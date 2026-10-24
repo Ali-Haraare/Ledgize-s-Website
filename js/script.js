@@ -72,46 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  var themeToggle = document.getElementById("theme-toggle");
-  if (themeToggle) {
-    var sunIcon = themeToggle.querySelector(".icon-sun");
-    var moonIcon = themeToggle.querySelector(".icon-moon");
-
-    function getEffectiveTheme() {
-      var saved = null;
-      try { saved = localStorage.getItem("ledgize-theme"); } catch (e) {}
-      if (saved === "light" || saved === "dark") return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-
-    function applyToggleIcon(theme) {
-      sunIcon.hidden = theme === "dark";
-      moonIcon.hidden = theme !== "dark";
-      themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
-    }
-
-    applyToggleIcon(getEffectiveTheme());
-
-    themeToggle.addEventListener("click", function () {
-      var next = getEffectiveTheme() === "dark" ? "light" : "dark";
-      document.documentElement.setAttribute("data-theme", next);
-      try { localStorage.setItem("ledgize-theme", next); } catch (e) {}
-      applyToggleIcon(next);
-    });
-  }
-
-  var progressBar = document.createElement("div");
-  progressBar.className = "scroll-progress";
-  progressBar.setAttribute("aria-hidden", "true");
-  document.body.appendChild(progressBar);
-
-  function updateScrollProgress() {
-    var scrollTop = window.scrollY || document.documentElement.scrollTop;
-    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    progressBar.style.width = pct + "%";
-  }
-
   var fabContact = document.createElement("a");
   fabContact.href = "mailto:ali@ledgize.com?subject=Quick%20question%20from%20the%20website";
   fabContact.className = "fab fab-contact";
@@ -137,11 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     fabTop.classList.toggle("is-visible", visible);
   }
 
-  function onScroll() {
-    updateScrollProgress();
-    updateFabVisibility();
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  window.addEventListener("scroll", updateFabVisibility, { passive: true });
+  updateFabVisibility();
 });

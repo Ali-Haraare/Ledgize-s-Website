@@ -76,14 +76,12 @@
   --space-8: 128px;
 }
 
-/* Dark mode: follows the visitor's OS/browser setting by default via
-   prefers-color-scheme, but the header toggle can explicitly override it
-   in either direction via [data-theme] on <html> (saved to localStorage).
-   Only color tokens change; navy/gold used as fills (buttons, featured
+/* Dark mode: follows the visitor's OS/browser setting via
+   prefers-color-scheme. Only color tokens change; navy/gold used as fills (buttons, featured
    card, footer, audit section) stay the same since they're already dark
    surfaces. Contrast-checked against WCAG AA. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root {
     --navy-pale: #232B40;
     --navy-text: #93B4EC;
     --gold-text: var(--gold);
@@ -97,20 +95,6 @@
     --header-bg: rgba(16,20,28,0.9);
   }
 }
-:root[data-theme="dark"] {
-  --navy-pale: #232B40;
-  --navy-text: #93B4EC;
-  --gold-text: var(--gold);
-  --ink: #F3F5F9;
-  --body: #C7CDD9;
-  --muted: #8890A3;
-  --line: #2E3750;
-  --bg: #10141C;
-  --bg-alt: #171C28;
-  --surface: #1B2130;
-  --header-bg: rgba(16,20,28,0.9);
-}
-
 /* ===== Reset ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -200,18 +184,6 @@ p, li { text-wrap: pretty; }
 }
 .skip-link:focus {
   top: var(--space-2);
-}
-
-/* ===== Scroll progress bar ===== */
-.scroll-progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 0%;
-  background: var(--gold);
-  z-index: 300;
-  transition: width 0.1s linear;
 }
 
 /* ===== Floating action buttons (contact + back to top) ===== */
@@ -310,23 +282,6 @@ p, li { text-wrap: pretty; }
   cursor: pointer;
 }
 .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--navy-text); border-radius: 2px; }
-
-.theme-toggle-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--navy-text);
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
-}
-.theme-toggle-btn:hover { background: var(--navy-pale); }
-.theme-toggle-btn svg { width: 17px; height: 17px; }
 
 /* ===== Sections ===== */
 .section { padding: var(--space-7) 0; }
@@ -818,8 +773,8 @@ p, li { text-wrap: pretty; }
 
 /* ===== Print ===== */
 @media print {
-  .site-header, .nav-toggle, .theme-toggle-btn, .skip-link,
-  .scroll-progress, .fab, .hero-visual, .audit-visual {
+  .site-header, .nav-toggle, .skip-link,
+  .fab, .hero-visual, .audit-visual {
     display: none !important;
   }
   .site-footer { border-top: 1px solid #000; }
