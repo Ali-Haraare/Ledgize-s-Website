@@ -402,6 +402,8 @@ p, li { text-wrap: pretty; }
   font-size: 0.9rem;
 }
 .stack-scope strong { color: var(--body); }
+.stack-close { margin-bottom: var(--space-3); }
+.stack-cta { display: flex; justify-content: center; margin-bottom: var(--space-6); }
 
 .stack-card {
   flex: 1;
@@ -428,16 +430,6 @@ p, li { text-wrap: pretty; }
   margin-bottom: var(--space-2);
 }
 
-.stack-tag {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 6px;
-}
-
 .stack-card strong {
   display: block;
   font-family: var(--font-serif);
@@ -447,6 +439,11 @@ p, li { text-wrap: pretty; }
   margin-bottom: var(--space-1);
 }
 .stack-card p { color: var(--muted); font-size: 0.94rem; margin-bottom: var(--space-2); }
+.stack-card .stack-pain { font-style: italic; font-size: 0.92rem; margin-bottom: 6px; }
+@media (min-width: 981px) {
+  /* Reserve two lines so the headlines line up across the three cards */
+  .stack-card .stack-pain { min-height: 3.2em; }
+}
 .stack-card .stack-owner {
   margin: auto 0 0;
   padding-top: var(--space-2);
