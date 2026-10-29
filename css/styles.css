@@ -402,8 +402,6 @@ p, li { text-wrap: pretty; }
   font-size: 0.9rem;
 }
 .stack-scope strong { color: var(--body); }
-.stack-close { margin-bottom: var(--space-3); }
-.stack-cta { display: flex; justify-content: center; margin-bottom: var(--space-6); }
 
 .stack-card {
   flex: 1;
