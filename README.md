@@ -56,8 +56,8 @@ The privacy policy's Analytics section describes it; update that section if the 
 - Scale is not yet an active offering (opening in spring 2027). Its card shows an "Opening in spring 2027"
   label and a disabled button instead of a live CTA.
 - The site serves Shopify, Amazon and eBay sellers; Xero support is paused.
-- The About section is intentionally firm-branded ("our founder") rather than naming or
-  photographing the founder, pending confirmation from the founder.
+- The About section names the founder, Ali, and links to his LinkedIn profile. There is no
+  founder photo yet.
 - `terms.html` names the registered business (Ledgize E-Commerce Financial Systems, a Kenyan
   sole proprietorship, BN-VZSEAWZK) and Kenyan governing law.
 - The primary conversion path is a direct Google Calendar booking link (opens in a new tab). The old mailto
