@@ -1,8 +1,8 @@
 # Ledgize Website
 
 Single-page marketing site for Ledgize, a firm helping Shopify, Amazon and eBay
-sellers get clear, current visibility into true profit margins, backed by
-executive-level financial advisory.
+sellers get clear, current visibility into true profit margins, with plain-English
+monthly reporting.
 
 Static HTML/CSS/vanilla JS, no build step, no backend.
 
