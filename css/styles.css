@@ -460,6 +460,7 @@ p, li { text-wrap: pretty; }
 
 .grid { display: grid; gap: var(--space-3); }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
 
 .card-flat {
   background: var(--bg-alt);
@@ -469,6 +470,8 @@ p, li { text-wrap: pretty; }
 }
 .card-flat h3 { font-size: 1.08rem; margin-bottom: var(--space-1); }
 .card-flat p { font-size: 0.96rem; color: var(--muted); }
+.monthly-grid .card-flat { background: var(--surface); }
+.monthly-grid .card-flat a { color: var(--navy-text); border-bottom: 1px solid var(--gold); }
 
 /* ===== FAQ accordion ===== */
 .faq-list { display: flex; flex-direction: column; gap: var(--space-2); max-width: 760px; margin: 0 auto; }
@@ -728,7 +731,7 @@ p, li { text-wrap: pretty; }
   .hero-visual { order: -1; max-width: 420px; margin: 0 auto; }
   .audit-visual { max-width: 320px; margin: 0 auto; }
 
-  .tiers, .process { grid-template-columns: repeat(2, 1fr); }
+  .tiers, .process, .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .stack-flow { flex-direction: column; }
   .stack-connector { display: none; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -753,7 +756,7 @@ p, li { text-wrap: pretty; }
     gap: var(--space-3);
   }
 
-  .grid-2, .tiers, .process { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .tiers, .process { grid-template-columns: 1fr; }
   .section { padding: var(--space-6) 0; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
