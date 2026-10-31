@@ -395,7 +395,7 @@ p, li { text-wrap: pretty; }
 }
 
 .stack-scope {
-  max-width: 720px;
+  max-width: 860px;
   margin: 0 auto var(--space-6);
   text-align: center;
   color: var(--muted);
@@ -441,14 +441,6 @@ p, li { text-wrap: pretty; }
 @media (min-width: 981px) {
   /* Reserve two lines so the headlines line up across the three cards */
   .stack-card .stack-pain { min-height: 3.2em; }
-}
-.stack-card .stack-owner {
-  margin: auto 0 0;
-  padding-top: var(--space-2);
-  border-top: 1px solid var(--line);
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--navy-text);
 }
 
 .stack-connector {
