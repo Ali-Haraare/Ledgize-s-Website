@@ -58,6 +58,7 @@
   --bg: #FFFFFF;
   --bg-alt: #F6F7FB;
   --surface: #FFFFFF;
+  --chart-sales: #C9D3E8;
   --header-bg: rgba(255,255,255,0.96);
   --radius: 4px;
   --max-width: 1160px;
@@ -92,6 +93,7 @@
     --bg: #10141C;
     --bg-alt: #171C28;
     --surface: #1B2130;
+    --chart-sales: #3B4A6E;
     --header-bg: rgba(16,20,28,0.9);
   }
 }
@@ -360,10 +362,31 @@ p, li { text-wrap: pretty; }
 .hero-actions { display: flex; gap: var(--space-2); flex-wrap: wrap; }
 .hero-visual { width: 100%; }
 
-.chart-bg { fill: var(--bg-alt); }
-.chart-axis { stroke: var(--line); }
-.chart-caption { fill: var(--muted); }
-.chart-trend { stroke: var(--navy-text); }
+.hero-svg {
+  filter: drop-shadow(0 18px 36px rgba(23,27,36,0.10)) drop-shadow(0 2px 6px rgba(23,27,36,0.06));
+}
+.hero-svg text { font-family: var(--font-sans); }
+.chart-card { fill: var(--surface); stroke: var(--line); }
+.chart-title { font-family: var(--font-serif) !important; font-size: 21px; font-weight: 600; fill: var(--ink); }
+.chart-sub { font-size: 13px; fill: var(--muted); }
+.chart-pill { fill: var(--navy-pale); }
+.chart-pill-text { font-size: 12px; font-weight: 600; letter-spacing: 0.04em; fill: var(--navy-text); }
+.chart-head { font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted); }
+.chart-rule { stroke: var(--line); stroke-width: 1; }
+.chart-label { font-size: 15px; font-weight: 600; fill: var(--ink); }
+.chart-value { font-size: 13px; fill: var(--muted); }
+.chart-value-best { fill: var(--gold-text); font-weight: 600; }
+.chart-sales { fill: var(--chart-sales); }
+.chart-profit { fill: var(--navy-text); }
+.chart-best, .chart-dot { fill: var(--gold); }
+.chart-note { font-size: 13.5px; font-weight: 600; fill: var(--ink); }
+.chart-bar {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: chart-grow 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes chart-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .chart-bar { animation: none; } }
 
 /* ===== Problem section: numbered rows, not icon cards ===== */
 .problem-list { border-top: 1px solid var(--line); }

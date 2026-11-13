@@ -33,7 +33,7 @@
   <link rel="preload" href="assets/fonts/source-serif4-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin />
 
-  <link rel="stylesheet" href="css/styles.css?v=28" />
+  <link rel="stylesheet" href="css/styles.css?v=29" />
 
   <script type="application/ld+json">
   {
@@ -391,24 +391,35 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
-            <defs>
-              <linearGradient id="barGrad" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stop-color="#1F3864"/>
-                <stop offset="100%" stop-color="#3E5C94"/>
-              </linearGradient>
-            </defs>
-            <rect x="20" y="20" width="440" height="320" rx="8" class="chart-bg"/>
-            <line x1="60" y1="80" x2="60" y2="300" class="chart-axis" stroke-width="2"/>
-            <line x1="60" y1="300" x2="440" y2="300" class="chart-axis" stroke-width="2"/>
-            <rect x="90" y="230" width="34" height="70" rx="2" fill="url(#barGrad)"/>
-            <rect x="150" y="190" width="34" height="110" rx="2" fill="url(#barGrad)"/>
-            <rect x="210" y="150" width="34" height="150" rx="2" fill="url(#barGrad)"/>
-            <rect x="270" y="110" width="34" height="190" rx="2" fill="url(#barGrad)"/>
-            <rect x="330" y="70" width="34" height="230" rx="2" fill="#C9A24B"/>
-            <polyline points="90,220 150,180 210,140 270,95 330,55" fill="none" class="chart-trend" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-            <circle cx="330" cy="55" r="6" fill="#C9A24B"/>
-            <text x="60" y="335" font-family="'Public Sans', sans-serif" font-size="13" class="chart-caption">Net margin, after fees &amp; ad spend</text>
+          <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" class="hero-svg">
+            <rect x="0.5" y="0.5" width="479" height="379" rx="14" class="chart-card"/>
+            <text x="28" y="52" class="chart-title">Profit by channel</text>
+            <text x="28" y="75" class="chart-sub">One month, after fees, ads and product cost</text>
+            <rect x="380" y="33" width="72" height="26" rx="13" class="chart-pill"/>
+            <text x="416" y="50.5" text-anchor="middle" class="chart-pill-text">Example</text>
+            <text x="120" y="112" class="chart-head">Sales</text>
+            <text x="296" y="112" class="chart-head">Real profit</text>
+            <line x1="28" y1="124" x2="452" y2="124" class="chart-rule"/>
+            <text x="28" y="158" class="chart-label">Amazon</text>
+            <rect x="120" y="146" width="150" height="14" rx="4" class="chart-bar chart-sales"/>
+            <text x="120" y="180" class="chart-value">$210k</text>
+            <rect x="296" y="146" width="74" height="14" rx="4" class="chart-bar chart-profit"/>
+            <text x="296" y="180" class="chart-value">$12.6k &#183; 6% margin</text>
+            <line x1="28" y1="196" x2="452" y2="196" class="chart-rule"/>
+            <text x="28" y="222" class="chart-label">Shopify</text>
+            <rect x="120" y="210" width="100" height="14" rx="4" class="chart-bar chart-sales"/>
+            <text x="120" y="244" class="chart-value">$140k</text>
+            <rect x="296" y="210" width="156" height="14" rx="4" class="chart-bar chart-best"/>
+            <text x="296" y="244" class="chart-value chart-value-best">$26.6k &#183; 19% margin</text>
+            <line x1="28" y1="260" x2="452" y2="260" class="chart-rule"/>
+            <text x="28" y="286" class="chart-label">eBay</text>
+            <rect x="120" y="274" width="43" height="14" rx="4" class="chart-bar chart-sales"/>
+            <text x="120" y="308" class="chart-value">$60k</text>
+            <rect x="296" y="274" width="49" height="14" rx="4" class="chart-bar chart-profit"/>
+            <text x="296" y="308" class="chart-value">$8.4k &#183; 14% margin</text>
+            <line x1="28" y1="326" x2="452" y2="326" class="chart-rule"/>
+            <circle cx="33" cy="351.5" r="4.5" class="chart-dot"/>
+            <text x="45" y="356" class="chart-note">Amazon sells the most. Shopify makes the most.</text>
           </svg>
         </div>
       </div>
