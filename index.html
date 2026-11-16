@@ -33,7 +33,7 @@
   <link rel="preload" href="assets/fonts/source-serif4-600.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/public-sans-400.woff2" as="font" type="font/woff2" crossorigin />
 
-  <link rel="stylesheet" href="css/styles.css?v=31" />
+  <link rel="stylesheet" href="css/styles.css?v=32" />
 
   <script type="application/ld+json">
   {
@@ -366,6 +366,7 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a href="https://calendar.app.google/x4VN65FmpogkEirC7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm header-cta">Book a call</a>
 
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -496,32 +497,16 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
           </div>
         </div>
 
-        <p class="stack-scope">Built for Shopify, Amazon and eBay sellers on QuickBooks Online, with Link My Books and AutoEntry included in your fee.</p>
-
-        <p class="section-lead center">
-          Every month, it all comes together in one close package: your profit and loss, balance
-          sheet, cash flow and a plain-English summary of what changed and what needs your attention.
-        </p>
-
-        <div class="grid grid-2">
-          <div class="card-flat">
-            <h3>A structured, not arbitrary, process</h3>
-            <p>
-              Every engagement starts with a structured look at how your business actually runs:
-              monthly orders, sales channels, how your money arrives, and inventory.
-              The plan we recommend is based on where your business actually stands, not a
-              one-size-fits-all package.
-            </p>
-          </div>
-          <div class="card-flat">
-            <h3>Built for e-commerce specifically</h3>
-            <p>
-              Marketplace payout timing, ad spend, and the true cost of each product, shipping and
-              duty included, aren't edge cases to us. They're the default assumption behind
-              every system we set up.
-            </p>
-          </div>
+        <div class="works-with">
+          <span class="works-label">Works with</span>
+          <ul class="works-list">
+            <li>QuickBooks Online</li>
+            <li>Link My Books</li>
+            <li>AutoEntry</li>
+            <li>A2X</li>
+          </ul>
         </div>
+        <p class="stack-scope">Built for Shopify, Amazon and eBay sellers on QuickBooks Online, with Link My Books and AutoEntry included in your fee.</p>
       </div>
     </section>
 
@@ -600,6 +585,40 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
         <p class="tiers-note">Every engagement starts with a Systems Architecture &amp; Implementation fee (your one-time setup fee), before the monthly retainer begins. It also covers your first month of bookkeeping, so the monthly price starts the month after. Your Health Check summary sets out your recommended plan, your monthly price and your setup fee.</p>
         <p class="tiers-note">If your books need cleanup, the setup fee is reduced by 10%. Your Health Check summary includes a cleanup estimate based on the read-only review; it's confirmed in writing after full access once you've signed, before the cleanup starts.</p>
         <p class="tiers-note">Your QuickBooks Online subscription stays in your name and is paid by you directly. Link My Books and AutoEntry are provided by Ledgize and included in your fee, so there's nothing extra for you to buy. Already using A2X? You can keep it on your own subscription.</p>
+
+        <div class="report-preview">
+          <div class="report-copy">
+            <span class="kicker-label">Inside Growth</span>
+            <h3 class="report-heading">One page that shows where the money went.</h3>
+            <p>Each month on Growth, your margin leak report shows the biggest places money was made and lost, by channel, ad platform, fees and refunds. A running log keeps track of what we flagged, what you decided and what changed.</p>
+          </div>
+          <div class="report-card" aria-hidden="true">
+            <div class="report-top">
+              <div>
+                <p class="report-title">Margin Leak Report</p>
+                <p class="report-sub">One month &#183; Shopify, Amazon, eBay</p>
+              </div>
+              <span class="pc-pill">Example</span>
+            </div>
+            <p class="report-label">Biggest leaks</p>
+            <ul class="report-lines">
+              <li><span>Amazon fulfillment fees on oversized items</span><span class="report-neg">&minus;$2,140</span></li>
+              <li><span>Meta ads on low-margin bundles</span><span class="report-neg">&minus;$1,860</span></li>
+              <li><span>eBay refunds on one product line</span><span class="report-neg">&minus;$940</span></li>
+            </ul>
+            <p class="report-label">Where you made money</p>
+            <ul class="report-lines">
+              <li><span>Shopify repeat customers</span><span class="report-pos">+$4,300</span></li>
+              <li><span>Top Amazon item after a price change</span><span class="report-pos">+$1,250</span></li>
+            </ul>
+            <p class="report-label">Decision log</p>
+            <div class="report-log">
+              <p><strong>Flagged:</strong> bundle ads losing money after fees</p>
+              <p><strong>You decided:</strong> pause bundles, move budget to single items</p>
+              <p><strong>What changed:</strong> ad loss down from $3,100 to $1,860</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -644,30 +663,37 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
 
         <div class="grid grid-3 monthly-grid">
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M9 14.5l2 2 4-4"/></svg></span>
             <h3>Your books, on a fixed date.</h3>
             <p>Your monthly package arrives by the 15th of the following month on Foundation, or by the 12th on Growth.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg></span>
             <h3>Replies within one business day.</h3>
             <p>Email <a href="mailto:ali@ledgize.com">ali@ledgize.com</a> any time. For anything time-sensitive, like a payment problem or a suspected duplicate charge, put "URGENT" in the subject line.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></svg></span>
             <h3>One short list of questions a month.</h3>
             <p>Each month we send the few transactions we can't verify on our own. Reply within 3 business days and your package stays on schedule. If answers come later, the delivery date moves back by the same number of days.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 4v4h4"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 20v-4h-4"/></svg></span>
             <h3>Month to month.</h3>
             <p>No long-term contract. Either side can end it with 30 days' written notice, and the setup fee is refunded in full if you cancel before setup work begins.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M12 7v10M14.5 9.2c-.5-.8-1.4-1.2-2.5-1.2-1.4 0-2.5.8-2.5 1.9 0 2.6 5 1.4 5 4 0 1.1-1.1 1.9-2.5 1.9-1.1 0-2.1-.5-2.6-1.3"/></svg></span>
             <h3>Simple billing in US dollars.</h3>
             <p>Each month is invoiced in advance, on the 1st, and is due within 7 days. Your first month of bookkeeping is included in the setup fee, so your first monthly invoice arrives on the 1st of the month after it. Transfer fees are paid by you.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12.2l2.4 2.4 4.8-4.8"/></svg></span>
             <h3>A weekly check-in.</h3>
             <p>Every week, on the same day, you get a short email from me confirming your systems are running and your books are on track, and telling you if I need anything from you.</p>
           </div>
           <div class="card-flat">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15.5" r="1.3"/></svg></span>
             <h3>Your books stay yours.</h3>
             <p>QuickBooks Online stays in your name and on your own subscription. Link My Books and AutoEntry are included in your fee, and if you ever leave, the Link My Books account moves into your name. We join as an invited user, never with your password, and you can remove our access at any time. We don't file taxes, manage inventory or run payroll; your tax preparer files using the books we keep.</p>
           </div>
@@ -736,6 +762,13 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
             on several channels, and the true cost of each product, shipping and duty included,
             are specialized problems, and most firms treat them as an afterthought.
           </p>
+          <div class="founder">
+            <div class="founder-photo" aria-hidden="true"><span>Photo of Ali</span></div>
+            <div>
+              <p class="founder-name">Ali</p>
+              <p class="founder-role">Founder, Ledgize &#183; Nairobi, Kenya</p>
+            </div>
+          </div>
           <p>
             Ledgize was founded by Ali, who works exclusively with Shopify, Amazon and eBay sellers. He spent close to a year studying
             how marketplace payouts, fees, refunds and sales tax actually move through a seller's
@@ -760,6 +793,18 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
     </section>
 
     <!-- ============ FAQ ============ -->
+    <section id="results" class="section section-proof">
+      <div class="container">
+        <div class="kicker center">
+          <span class="kicker-label">From our clients</span>
+        </div>
+        <div class="proof-card">
+          <p class="proof-quote">Your first Founding Client testimonial goes here: a short quote in their own words, ideally naming one result.</p>
+          <p class="proof-who">Client name &#183; Store name &#183; Channels</p>
+        </div>
+      </div>
+    </section>
+
     <section id="faq" class="section">
       <div class="container">
         <div class="kicker center">
@@ -808,7 +853,7 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
     </section>
 
     <!-- ============ CONTACT / FINAL CTA ============ -->
-    <section id="contact" class="section section-contact">
+    <section id="contact" class="section section-contact section-contact-navy">
       <div class="container contact-inner">
         <h2 class="section-title center">Get Started</h2>
         <p class="section-lead center">
@@ -817,7 +862,7 @@ c-273 -36 -307 -43 -398 -89 -48 -24 -98 -47 -112 -51 -94 -27 -254 -122 -347
           three business days of access.
         </p>
         <div class="contact-actions">
-          <a href="https://calendar.app.google/x4VN65FmpogkEirC7" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Book Your Free Books Health Check</a>
+          <a href="https://calendar.app.google/x4VN65FmpogkEirC7" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy btn-lg">Book Your Free Books Health Check</a>
         </div>
 
         <div class="contact-grid contact-grid-single">
