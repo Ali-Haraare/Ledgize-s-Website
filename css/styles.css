@@ -930,3 +930,72 @@ p, li { text-wrap: pretty; }
   .hero-label { font-size: 0.8rem; }
   .founder { gap: var(--space-2); }
 }
+
+/* ===== Sample monthly package ===== */
+.sample-pack {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: var(--space-6);
+  align-items: center;
+  margin-top: var(--space-6);
+  padding: var(--space-5) var(--space-5) var(--space-5) var(--space-6);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(23,27,36,0.07);
+  overflow: hidden;
+}
+.sample-copy .kicker-label { display: inline-block; margin-bottom: var(--space-2); }
+.sample-title { font-size: clamp(1.6rem, 2.6vw, 2.1rem); line-height: 1.2; color: var(--ink); margin-bottom: var(--space-2); }
+.sample-lead { font-size: 1.02rem; color: var(--muted); margin-bottom: var(--space-3); }
+.sample-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: var(--space-4); }
+.sample-list li { position: relative; padding-left: 28px; font-size: 0.96rem; color: var(--body); }
+.sample-list li::before {
+  content: "";
+  position: absolute; left: 0; top: 4px;
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F3864' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 11px no-repeat;
+}
+.sample-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+.sample-meta { font-size: 0.84rem; color: var(--muted); }
+.sample-note { margin-top: var(--space-3); padding-top: var(--space-2); border-top: 1px solid var(--line); font-size: 0.86rem; color: var(--muted); }
+
+.sample-visual {
+  position: relative;
+  min-height: 470px;
+  border-radius: 12px;
+  background:
+    radial-gradient(120% 90% at 85% 10%, rgba(201,162,75,0.18), transparent 55%),
+    var(--navy-pale);
+}
+.sample-page {
+  position: absolute;
+  display: block;
+  width: 56%;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(23,27,36,0.08), 0 22px 44px rgba(23,27,36,0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.sample-page img { display: block; width: 100%; height: auto; }
+.sample-page-back { top: 34px; right: 7%; transform: rotate(4deg); }
+.sample-page-front { top: 58px; left: 9%; transform: rotate(-3deg); }
+.sample-page:hover, .sample-page:focus-visible { z-index: 2; box-shadow: 0 4px 10px rgba(23,27,36,0.1), 0 30px 60px rgba(23,27,36,0.24); }
+.sample-page-back:hover, .sample-page-back:focus-visible { transform: rotate(2deg) translateY(-6px); }
+.sample-page-front:hover, .sample-page-front:focus-visible { transform: rotate(-1deg) translateY(-6px); }
+.sample-tag {
+  position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%);
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--surface); border: 1px solid var(--line);
+  font-size: 0.76rem; font-weight: 600; color: var(--muted); white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) { .sample-page { transition: none; } }
+@media (max-width: 980px) {
+  .sample-pack { grid-template-columns: 1fr; padding: var(--space-4); gap: var(--space-4); }
+  .sample-visual { min-height: 420px; }
+}
+@media (max-width: 760px) {
+  .sample-visual { min-height: 340px; }
+  .sample-page { width: 60%; }
+}
