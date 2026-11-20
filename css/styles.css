@@ -604,6 +604,7 @@ p, li { text-wrap: pretty; }
 .tier-featured .tier-flag { background: var(--gold); color: var(--navy); }
 .tier-featured .tier-name { color: #fff; }
 .tier-featured .tier-for { color: rgba(255,255,255,0.72); }
+.tier-tagline { color: var(--ink); font-weight: 600; font-size: 0.98rem; }
 .tier-featured .tier-tagline { color: #fff; font-weight: 600; font-size: 0.98rem; }
 .tier-featured .tier-price { color: #fff; }
 .tier-featured .tier-list li { color: rgba(255,255,255,0.92); }
