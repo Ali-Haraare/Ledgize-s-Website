@@ -1,0 +1,74 @@
+    <section class="section calc-page">
+      <div class="container calc-inner">
+        <div class="kicker center">
+          <span class="kicker-label">Free tool</span>
+        </div>
+        <h1 class="section-title center">True margin calculator</h1>
+        <p class="section-lead center">Enter a typical month for each channel you sell on. See what each one really keeps after product cost, fees, fulfilment and ads. It runs in your browser: nothing you type is sent or saved.</p>
+
+        <div class="calc-card">
+          <div class="calc-top">
+            <p class="calc-step"><span class="calc-step-n">1</span> Your month, by channel</p>
+            <div class="calc-buttons">
+              <button type="button" class="calc-btn" id="calc-clear">Clear all</button>
+              <button type="button" class="calc-btn" id="calc-example">Show the example again</button>
+            </div>
+          </div>
+          <p class="calc-example-note" id="calc-example-note">Showing example figures for a seller on all three channels. Replace them with your own, or clear them and start fresh.</p>
+
+          <div class="calc-table-wrap">
+            <table class="calc-table" id="calc-inputs">
+              <thead>
+                <tr><th scope="col">In dollars, for one month</th><th scope="col">Shopify</th><th scope="col">Amazon</th><th scope="col">eBay</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Sales<span>after discounts, before refunds, without sales tax</span></th><td data-ch="shopify" data-f="sales"></td><td data-ch="amazon" data-f="sales"></td><td data-ch="ebay" data-f="sales"></td></tr>
+                <tr><th scope="row">Refunds<span>money given back to customers</span></th><td data-ch="shopify" data-f="refunds"></td><td data-ch="amazon" data-f="refunds"></td><td data-ch="ebay" data-f="refunds"></td></tr>
+                <tr><th scope="row">Product cost<span>landed cost of the units you sold this month</span></th><td data-ch="shopify" data-f="cogs"></td><td data-ch="amazon" data-f="cogs"></td><td data-ch="ebay" data-f="cogs"></td></tr>
+                <tr><th scope="row">Marketplace and payment fees<span>referral, final value and card processing fees</span></th><td data-ch="shopify" data-f="fees"></td><td data-ch="amazon" data-f="fees"></td><td data-ch="ebay" data-f="fees"></td></tr>
+                <tr><th scope="row">Fulfilment and shipping<span>FBA fees, 3PL, postage, packaging, storage</span></th><td data-ch="shopify" data-f="fulfil"></td><td data-ch="amazon" data-f="fulfil"></td><td data-ch="ebay" data-f="fulfil"></td></tr>
+                <tr><th scope="row">Advertising<span>ad spend that drives this channel's sales</span></th><td data-ch="shopify" data-f="ads"></td><td data-ch="amazon" data-f="ads"></td><td data-ch="ebay" data-f="ads"></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="calc-step calc-step-results"><span class="calc-step-n">2</span> What each channel really keeps</p>
+          <div class="calc-table-wrap">
+            <table class="calc-table calc-results" aria-live="polite">
+              <thead>
+                <tr><th scope="col"></th><th scope="col">Shopify</th><th scope="col">Amazon</th><th scope="col">eBay</th><th scope="col">Total</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Net sales<span>sales less refunds</span></th><td data-out="shopify-net"></td><td data-out="amazon-net"></td><td data-out="ebay-net"></td><td data-out="total-net"></td></tr>
+                <tr><th scope="row">Kept after product cost</th><td data-out="shopify-cm1"></td><td data-out="amazon-cm1"></td><td data-out="ebay-cm1"></td><td data-out="total-cm1"></td></tr>
+                <tr><th scope="row">Kept after fees and fulfilment</th><td data-out="shopify-cm2"></td><td data-out="amazon-cm2"></td><td data-out="ebay-cm2"></td><td data-out="total-cm2"></td></tr>
+                <tr class="calc-key"><th scope="row">Kept after ads<span>your true margin</span></th><td data-out="shopify-cm3"></td><td data-out="amazon-cm3"></td><td data-out="ebay-cm3"></td><td data-out="total-cm3"></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="calc-bars" id="calc-bars" aria-hidden="true"></div>
+          <p class="calc-summary" id="calc-summary"></p>
+        </div>
+
+        <div class="calc-notes">
+          <h2 class="calc-notes-title">What this shows, and what it doesn't</h2>
+          <ul>
+            <li><strong>The maths is exact; the answer is only as good as the numbers you enter.</strong> Most sellers don't have clean per-channel figures, which is exactly the problem good books solve.</li>
+            <li><strong>Use the product cost of what you sold,</strong> not what you bought this month. Stock you bought but haven't sold isn't a cost yet.</li>
+            <li><strong>Leave sales tax out of sales.</strong> It's money you're holding for the states, not income.</li>
+            <li><strong>This isn't your net profit.</strong> It stops before overheads like software, staff, rent and bookkeeping, which aren't tied to one channel.</li>
+            <li><strong>Ads are only as accurate as how you split them.</strong> Meta and Google ads usually drive Shopify; Amazon ads drive Amazon.</li>
+          </ul>
+        </div>
+
+        <aside class="guide-cta calc-cta">
+          <p class="guide-cta-title">Want these numbers from your actual books, every month?</p>
+          <p>The Free Books Health Check is a 30-minute call and a read-only review of your books. Within three business days of access, you get a one-page summary of what we found. No cost and no obligation.</p>
+          <div class="guide-cta-actions">
+            <a href="https://calendar.app.google/x4VN65FmpogkEirC7" target="_blank" rel="noopener noreferrer" class="btn btn-on-navy">Book Your Free Books Health Check</a>
+            <a href="/#sample" class="guide-cta-link">See a sample monthly package</a>
+          </div>
+        </aside>
+      </div>
+    </section>

@@ -284,6 +284,7 @@ def build_index(guides, parts):
         <div class="guides-grid guides-grid-index">
           {cards}
         </div>
+        <p class="calc-promo"><strong>Free tool:</strong> <a href="/tools/margin-calculator.html">See what each of your channels really keeps with the true margin calculator</a></p>
         <div class="guides-index-cta">
           {cta_box()}
         </div>
@@ -346,6 +347,26 @@ def update_sitemap(guides):
     open(path, "w", encoding="utf-8").write(s)
 
 
+def build_calculator(parts):
+    header, footer, css_version, js, analytics = parts
+    header = header.replace(' aria-current="page"', "")
+    url = f"{SITE}/tools/margin-calculator.html"
+    title = "True margin calculator: Ledgize"
+    desc = ("Free calculator for Shopify, Amazon and eBay sellers. Enter a month of sales, refunds, product cost, "
+            "fees, fulfilment and ads, and see what each channel really keeps.")
+    body = read("_tools/margin-calculator.body.html").rstrip()
+    page = head(title, desc, url, css_version, "website")
+    page += f"""  {header}
+
+  <main id="main-content" tabindex="-1">
+{body}
+  </main>
+"""
+    page += tail(footer, js, analytics).replace(
+        "\n  " + analytics, '\n  <script src="/js/margin-calculator.js?v=1"></script>\n  ' + analytics)
+    return page
+
+
 def main():
     drafts = "--drafts" in sys.argv
     parts = site_parts()
@@ -367,6 +388,9 @@ def main():
     with open(os.path.join(OUT, "feed.xml"), "w", encoding="utf-8") as f:
         f.write(build_feed(published))
     update_sitemap(published)
+    os.makedirs(os.path.join(ROOT, "tools"), exist_ok=True)
+    with open(os.path.join(ROOT, "tools", "margin-calculator.html"), "w", encoding="utf-8") as f:
+        f.write(build_calculator(parts))
     print(f"Built {len(shown)} guide(s) ({len(published)} published, {len(shown) - len(published)} draft).")
 
 
