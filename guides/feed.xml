@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Ledgize Guides</title>
+    <link>https://www.ledgize.com/guides/</link>
+    <description>Plain-English guides for Shopify, Amazon and eBay sellers.</description>
+    <item>
+      <title>Your Shopify deposit isn&#x27;t your revenue. Here&#x27;s what&#x27;s inside it.</title>
+      <link>https://www.ledgize.com/guides/shopify-deposit-isnt-your-revenue.html</link>
+      <guid>https://www.ledgize.com/guides/shopify-deposit-isnt-your-revenue.html</guid>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <description>A Shopify Payments payout mixes sales, shipping, sales tax, refunds and fees into one number. Here&#x27;s how to split it so your books show what you really earned.</description>
+    </item>
+    <item>
+      <title>Why your Amazon sales land in the wrong month</title>
+      <link>https://www.ledgize.com/guides/amazon-sales-wrong-month.html</link>
+      <guid>https://www.ledgize.com/guides/amazon-sales-wrong-month.html</guid>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Amazon pays out in settlements that don&#x27;t follow the calendar, so a single deposit can hold sales from two months. Here&#x27;s how that skews your monthly numbers, and how to fix it.</description>
+    </item>
+    <item>
+      <title>Profitable on paper, short on cash: where the money went</title>
+      <link>https://www.ledgize.com/guides/profitable-but-short-on-cash.html</link>
+      <guid>https://www.ledgize.com/guides/profitable-but-short-on-cash.html</guid>
+      <pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Your profit and loss says you made money, but your bank balance went down. Here are the usual reasons for e-commerce sellers, and the one report that shows them.</description>
+    </item>
+  </channel>
+</rss>

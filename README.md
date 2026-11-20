@@ -62,3 +62,7 @@ The privacy policy's Analytics section describes it; update that section if the 
   sole proprietorship, BN-VZSEAWZK) and Kenyan governing law.
 - The primary conversion path is a direct Google Calendar booking link (opens in a new tab). The old mailto
   contact form was removed as redundant; "Prefer email?" still links to `ali@ledgize.com`.
+
+## Guides
+
+Guide articles live in `_guides/`, one HTML file each, with a short header (title, description, category, date, draft) between `---` lines. Run `python3 _tools/build_guides.py` to rebuild `guides/`, the RSS feed and the guide entries in `sitemap.xml`. Add `--drafts` to include drafts in a local preview. Folders starting with `_` are not published.
