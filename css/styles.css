@@ -1092,6 +1092,7 @@ p, li { text-wrap: pretty; }
 
 /* ===== Scan polish ===== */
 .process-step p strong { color: var(--ink); font-weight: 600; }
+.faq-col { display: flex; flex-direction: column; gap: var(--space-2); }
 @media (min-width: 981px) {
-  .faq-list { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: var(--space-2) var(--space-3); max-width: 1040px; }
+  .faq-list { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: var(--space-3); max-width: 1040px; }
 }
