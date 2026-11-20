@@ -1009,7 +1009,7 @@ p, li { text-wrap: pretty; }
 .tier-pricing { min-height: 5.6rem; padding: var(--space-2) 0 0; margin-bottom: var(--space-1); border-top: 1px solid var(--line); }
 .tier-featured .tier-pricing { border-color: rgba(255,255,255,0.16); }
 .tier-card .tier-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px; margin: 0; font-size: inherit; }
-.tier-amount { font-family: var(--font-serif); font-size: 2.1rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; color: var(--navy-text); }
+.tier-amount { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; line-height: 1.1; letter-spacing: -0.01em; color: var(--navy-text); }
 .tier-period { font-size: 0.92rem; font-weight: 500; color: var(--muted); }
 .tier-featured .tier-amount { color: #fff; }
 .tier-featured .tier-period { color: rgba(255,255,255,0.7); }
